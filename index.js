@@ -92,3 +92,36 @@ function showgiohang_trangthanhtoan(){
         '   </tr>';
     document.getElementById("mycart").innerHTML=ttgh;
 }
+function dongydathang() {
+    var ttnh = document.getElementById("thongtinnhanhang").children;
+    var hoten = ttnh[0].children[1].children[0].value;
+    var diachi= ttnh[1].children[1].children[0].value;
+    var dienthoai = ttnh[2].children[1].children[0].value;
+    var email = ttnh[3].children[1].children[0].value;
+    var nguoinhan=new Array(hoten, diachi, dienthoai,email);
+    console.log(nguoinhan);
+    sessionStorage.setItem("nguoinhan",JSON.stringify(nguoinhan));
+    window.location.assign("donhang.html");
+}
+function thongtinnguoinhan() {
+    var nguoinhan = sessionStorage.getItem("nguoinhan");
+    var thongtin = JSON.parse(nguoinhan);
+    var tt=' <tr>' +
+        '    <td width="20%">Họ tên</td>' +
+        '    <td>'+thongtin[0]+'></td>' +
+        '    </tr>'  +
+        '    <tr>' +
+        '    <td>Địa chỉ</td>' +
+        '    <td>'+thongtin[1]+'</td>' +
+        '    </tr>' +
+        '    <tr>' +
+        '    <td>Điện thoại</td>' +
+        '    <td>'+thongtin[2]+'</td>' +
+        '    </tr>' +
+        '    <tr>' +
+        '     <td>Email</td>' +
+        '     <td>'+thongtin[3]+'</td>' +
+        '      </tr>';
+    document.getElementById("thongtinnhanhang").innerHTML=tt;
+}
+thongtinnguoinhan();
