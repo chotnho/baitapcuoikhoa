@@ -9,12 +9,23 @@ function themvaogiohang(x) {
     var hinh = boxsp[0].children[0].src;
     var gia = boxsp[1].children[0].innerText;
     var tensp = boxsp[2].innerText;
-    var soluong = boxsp[3].value;
+    var soluong = parseInt( boxsp[3].value);
     var sp = new Array(hinh, gia, tensp, soluong);
-
-    giohang.push(sp);
-
-    console.log(giohang);
+//kiểm tra trong giỏ hàng
+    var kt = 0;
+    for (let i = 0; i<giohang.length;i++){
+        if (giohang[i][2]==tensp){
+            kt = 1;
+            soluong+=parseInt(giohang[i][3]);
+            giohang[i][3] = soluong;
+            break
+        }
+    }
+    if (kt ==0){
+        // thêm mới giỏ hàng
+        giohang.push(sp);
+    }
+    //console.log(giohang);
     showcountsp();
 // lưu giỏ hàng dùng sessionStorage và Json.stringify (chuyển hàm thành chuỗi)
 
