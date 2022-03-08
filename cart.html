@@ -8,6 +8,7 @@
     <title>Shopping Cart | View Cart</title>
     <link rel="stylesheet" href="assets/css/style.css">
 
+
 </head>
 
 <body>
@@ -18,7 +19,7 @@
         <div class="row mb menu">
             <ul>
                 <li><a href="index.html">Trang chủ</a></li>
-                <li><a href="cart.html">Giỏ hàng</a></li>
+                <li><a href="cart.html">Thanh toán</a></li>
                 <li><a href="#">Liên hệ</a></li>
                 <li><a href="#">Góp ý</a></li>
                 <li><a href="#">Hỏi đáp</a></li>
@@ -58,23 +59,7 @@
                             <th>Số lượng</th>
                             <th>Thành tiền ($)</th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td><img src="assets/img/1.jpg" alt=""></td>
-                            <td>Đồng hồ</td>
-                            <td>10</td>
-                            <td>1</td>
-                            <td>
-                                <div>10</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th colspan="5">Tổng đơn hàng</th>
-                            <th>
-                                <div>10</div>
-                            </th>
-
-                        </tr>
+                        <tbody id="mycart"></tbody>
                     </table>
                 </div>
                 <div class="row mb">
@@ -188,6 +173,10 @@
             Copyright © BÙI THANH HẢI LỚP PF211R2
         </div>
     </div>
+    <script src="index.js"> </script>
+        <script>
+            showgiohang_trangthanhtoan();
+        </script>
 
 </body>
 
