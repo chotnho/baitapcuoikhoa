@@ -137,3 +137,4 @@ function showthongtinnguoinhan(){
     document.getElementById("thongtinnhanhang").innerHTML = tt;
 }
 
+
