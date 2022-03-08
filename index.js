@@ -103,25 +103,26 @@ function dongydathang() {
     sessionStorage.setItem("nguoinhan",JSON.stringify(nguoinhan));
     window.location.assign("donhang.html");
 }
-function thongtinnguoinhan() {
+function showthongtinnguoinhan(){
     var nguoinhan = sessionStorage.getItem("nguoinhan");
     var thongtin = JSON.parse(nguoinhan);
+
     var tt=' <tr>' +
-        '    <td width="20%">Họ tên</td>' +
-        '    <td>'+thongtin[0]+'></td>' +
-        '    </tr>'  +
-        '    <tr>' +
-        '    <td>Địa chỉ</td>' +
-        '    <td>'+thongtin[1]+'</td>' +
-        '    </tr>' +
-        '    <tr>' +
-        '    <td>Điện thoại</td>' +
-        '    <td>'+thongtin[2]+'</td>' +
-        '    </tr>' +
-        '    <tr>' +
-        '     <td>Email</td>' +
-        '     <td>'+thongtin[3]+'</td>' +
-        '      </tr>';
-    document.getElementById("thongtinnhanhang").innerHTML=tt;
+        ' <td width="20%">Họ tên</td>' +
+        ' <td>'+thongtin[0]+'></td>' +
+        ' </tr>'  +
+        ' <tr>' +
+        ' <td>Địa chỉ</td>' +
+        ' <td>'+thongtin[1]+'</td>' +
+        ' </tr>' +
+        ' <tr>' +
+        ' <td>Điện thoại</td>' +
+        ' <td>'+thongtin[2]+'</td>' +
+        ' </tr>' +
+        ' <tr>' +
+        ' <td>Email</td>' +
+        ' <td>'+thongtin[3]+'</td>' +
+        ' </tr>';
+    document.getElementById("thongtinnhanhang").innerHTML = tt;
 }
-thongtinnguoinhan();
+
