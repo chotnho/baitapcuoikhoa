@@ -51,11 +51,15 @@ function showmycart(){
             '  <td>' +
             '  <div>'+tt+'</div>' +
             '  </td>' +
+
+            '  <td>' +
+            '  <button onclick="xoasp(this)">Xóa</button>' +
+            '  </td>' +
             '  </tr>' ;
 
     }
     ttgh+= '<tr>' +
-         '  <th colSpan="5">Tổng đơn hàng</th>' +
+         '  <th colSpan="6">Tổng đơn hàng</th>' +
          '  <th>' +
          '  <div>'+tong+'</div>' +
          '  </th>' +
@@ -75,6 +79,12 @@ function showcart(){
     showmycart();
 
     }
+    function xoasp(x){
+    var tr = x.parentElement.parentElement;
+    var tensp=tr.children[2].innerText;
+    tr.remove();
+
+    }
 function showgiohang_trangthanhtoan(){
     var gh = sessionStorage.getItem("giohang");
     var giohang = JSON.parse(gh);
@@ -92,6 +102,7 @@ function showgiohang_trangthanhtoan(){
             '  <td>' +
             '  <div>'+tt+'</div>' +
             '  </td>' +
+
             '  </tr>' ;
 
     }

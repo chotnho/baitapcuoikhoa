@@ -74,6 +74,11 @@ a {
     padding: 10px;
     background-color: #EEEEEE;
 }
+
+#xoatatca{
+    float: right;
+    margin-top: 10px;
+}
 .footer {
     background-color: #F90;
     border: 1px #F60 solid;
