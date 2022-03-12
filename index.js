@@ -79,12 +79,22 @@ function showcart(){
     showmycart();
 
     }
-    function xoasp(x){
-    var tr = x.parentElement.parentElement;
-    var tensp=tr.children[2].innerText;
-    tr.remove();
-
+    function xoasp(x) {
+        var tr = x.parentElement.parentElement;
+        var tensp = tr.children[2].innerText;
+        tr.remove();
+        for ( let i = 0; i <giohang.length; i++){
+            if (giohang[i][2] ==tensp){
+                giohang.splice(i,1);
+            }
+        }
+        showmycart();
     }
+    function xoatatca(){
+    giohang = [];
+    showmycart();
+    }
+
 function showgiohang_trangthanhtoan(){
     var gh = sessionStorage.getItem("giohang");
     var giohang = JSON.parse(gh);
