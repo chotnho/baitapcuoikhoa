@@ -89,10 +89,12 @@ function showcart(){
             }
         }
         showmycart();
+        showcountsp();
     }
     function xoatatca(){
     giohang = [];
     showmycart();
+    showcountsp();
     }
 
 function showgiohang_trangthanhtoan(){
